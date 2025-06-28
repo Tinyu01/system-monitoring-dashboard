@@ -1,0 +1,10 @@
+[all:inventory]
+[web]
+192.168.1.10 ansible_ssh_user=deploy ansible_ssh_private_key_file=~/.ssh/deploy_key
+192.168.1.11 ansible_ssh_user=deploy ansible_ssh_private_key_file=~/.ssh/deploy_key
+
+[database]
+192.168.1.20 ansible_ssh_user=deploy ansible_ssh_private_key_file=~/.ssh/deploy_key
+
+[monitoring]
+192.168.1.30 ansible_ssh_user=deploy ansible_ssh_private_key_file=~/.ssh/deploy_key

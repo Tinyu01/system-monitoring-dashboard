@@ -1,0 +1,20 @@
+---
+- name: Deploy System Monitoring Dashboard
+  hosts: all
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+    - name: Install Docker Compose
+      apt:
+        name: docker-compose
+        state: present
+    - name: Copy project files
+      copy:
+        src: .
+        dest: /opt/system-monitor
+    - name: Start Docker Compose
+      command: docker-compose up -d
+      args:
+        chdir: /opt/system-monitor

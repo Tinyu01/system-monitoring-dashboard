@@ -1,0 +1,28 @@
+settings:
+  debug: true
+  log_level: INFO
+  database:
+    uri: "sqlite:///db.sqlite3"
+    echo: false
+  prometheus:
+    url: "http://prometheus:9090"
+  grafana:
+    url: "http://grafana:3000"
+  ai_anomaly_detection:
+    enabled: true
+    threshold: 0.05
+  alerts:
+    notification:
+      email:
+        enabled: true
+        recipients:
+          - "admin@example.com"
+      slack:
+        enabled: false
+        webhook_url: ""
+  resources:
+    cpu_limit: "80%"
+    memory_limit: "80%"
+  metrics:
+    collection_interval: 10
+    retention_period: "30d"

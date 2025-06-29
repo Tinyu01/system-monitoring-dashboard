@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 function Home() {
   return (
@@ -59,6 +60,19 @@ function Home() {
             Visit our GitHub
           </a>
         </section>
+
+        <div className="flex flex-col items-center justify-center min-h-[60vh]">
+          <h2 className="text-4xl font-bold mb-4 text-blue-700 dark:text-blue-300">Welcome to the System Monitoring Dashboard</h2>
+          <p className="text-lg text-gray-700 dark:text-gray-200 mb-6">
+            Monitor your system metrics, resources, and alerts in real time.
+          </p>
+          <a
+            href="/dashboard"
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+          >
+            Go to Dashboard
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ function App() {
       <Router>
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
           <nav className="bg-blue-600 dark:bg-blue-800 p-4 sticky top-0 z-10">
-            < dix className="container mx-auto flex justify-between items-center">
+            <div className="container mx-auto flex justify-between items-center">
               <h1 className="text-2xl font-bold">System Monitor</h1>
               <div className="space-x-4">
                 <a href="/" className="hover:underline">Home</a>

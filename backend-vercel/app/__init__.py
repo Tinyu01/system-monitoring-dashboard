@@ -11,7 +11,7 @@ def create_app():
     
     # Initialize extensions
     db.init_app(app)
-    CORS(app, resources={r"/api/*": {"https://system-monitoring-dashboard-one.vercel.app/", "http://localhost:3000"]}})
+    CORS(app, resources={r"/api/*": {"origins": ["https://system-monitoring-dashboard-one.vercel.app/", "http://localhost:3000"]}})
     
     # Register blueprints
     from .routes import metrics, alerts, resources, reports

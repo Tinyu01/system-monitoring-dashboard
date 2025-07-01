@@ -1,20 +1,26 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-function useWebSocket(url) {
+function useMetrics(apiUrl) {
   const [data, setData] = useState({ metrics: [], alerts: [], resources: [] });
 
-  const connect = () => {
-    const ws = new WebSocket(url);
-    ws.onmessage = (event) => {
-      setData(JSON.parse(event.data));
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${apiUrl}/api/metrics`);
+        setData(response.data);
+      } catch (error) {
+        console.error('Error fetching metrics:', error);
+      }
     };
-    ws.onclose = () => {
-      setTimeout(connect, 1000); // Reconnect on close
-    };
-    return () => ws.close();
-  };
 
-  return { data, connect };
+    fetchData(); // Initial fetch
+    const interval = setInterval(fetchData, 5000); // Poll every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [apiUrl]);
+
+  return { data };
 }
 
-export default useWebSocket;
+export default useMetrics;

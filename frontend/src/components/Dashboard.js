@@ -6,7 +6,7 @@ import ResourceView from './ResourceView';
 import ARPreview from './ARPreview';
 
 function Dashboard() {
-  const { data, connect } = useWebSocket('ws://localhost:5000/ws/metrics');
+  const { data, connect } = useWebSocket('https://vercel.com/masingita-ottis-malulekes-projects/system-monitoring-dashboard-osme/6fuBr6UNd99WZU2TQHXGWDMZR8Py');
 
   useEffect(() => {
     connect();

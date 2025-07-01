@@ -8,7 +8,7 @@ bp = Blueprint('metrics', __name__, url_prefix='/api/metrics')
 def get_metrics():
     try:
         metrics_data = query_prometheus('system_metrics')
-        anomalies = detect_anomalies(metrics_data)
+        anomalies = detect_anomalies(metrics_data)  # Will return empty list
         return jsonify({
             'status': 'success',
             'data': metrics_data,

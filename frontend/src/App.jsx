@@ -12,14 +12,14 @@ function App() {
     <ThemeProvider>
       <Router>
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-          <nav className="bg-blue-600 dark:bg-blue-800 p-4 sticky top-0 z-10">
-            <div className="container mx-auto flex justify-between items-center">
-              <h1 className="text-2xl font-bold">System Monitor</h1>
-              <div className="space-x-4">
-                <a href="/" className="hover:underline">Home</a>
-                <a href="/features" className="hover:underline">Features</a>
-                <a href="/about" className="hover:underline">About</a>
-                <a href="/contact" className="hover:underline">Contact</a>
+          <nav className="bg-blue-600 dark:bg-blue-800 p-2 sm:p-4 sticky top-0 z-10">
+            <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
+              <h1 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-0">System Monitor</h1>
+              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                <a href="/" className="hover:underline text-base sm:text-lg">Home</a>
+                <a href="/features" className="hover:underline text-base sm:text-lg">Features</a>
+                <a href="/about" className="hover:underline text-base sm:text-lg">About</a>
+                <a href="/contact" className="hover:underline text-base sm:text-lg">Contact</a>
                 <ThemeToggle />
               </div>
             </div>

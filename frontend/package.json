@@ -2,6 +2,8 @@
   "name": "system-monitor-frontend",
   "version": "1.0.0",
   "dependencies": {
+    "axios": "^1.11.0",
+    "clsx": "^1.2.1",
     "aframe": "^1.4.2",
     "chart.js": "^4.4.0",
     "framer-motion": "^10.12.4",

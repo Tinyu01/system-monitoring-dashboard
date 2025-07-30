@@ -4,7 +4,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 dark:from-gray-900 dark:to-blue-900">
+    <div className="min-h-screen bg-blue-50 dark:bg-gray-900">
       <div className="container mx-auto p-4 text-center">
         <motion.h1 
           className="text-5xl font-bold mb-4 glass-effect p-4 rounded-lg"
